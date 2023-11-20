@@ -1,0 +1,61 @@
+/* ==================*-HEADER COMPONENT-*=============================== */
+header {
+  background: white;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.asmco-brand {
+  max-width: 166px;
+  padding-block: .3125rem;
+}
+/* Add Animation hamburger */
+header .hamburger {
+  height: 30px;
+  width: 35px;
+  border-radius: 3px;
+  background: white;
+  display: block;
+}
+
+header .hamburger label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 100%;
+}
+
+header .hamburger label span {
+  display: block;
+  width: 100%;
+  border-top: 2px solid black;
+  border-radius: 2px;
+  transition: all 0.2s ease-in;
+}
+input#menuToggle {
+  display: none;
+}
+#menuToggle:checked~.hamburger label>span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+#menuToggle:checked~.hamburger label>span:nth-child(2) {
+  opacity: 0;
+}
+
+#menuToggle:checked~.hamburger label>span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.asmco-menu ul {}
+
+.asmco-menu {
+  display: none;
+}
